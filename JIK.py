@@ -12,14 +12,13 @@ def send_email(a):
     '''
     port = 465
     sender_email = MY_ADDRESS
-    receiver_email = 'giucecrew@gmail.com'
+    receiver_email = 'RECEIVER_EMAIL@mail.com'
     message = f'The album {a} is released on spotify!'
 
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
         server.login(MY_ADDRESS, PASSWORD)
         server.sendmail(sender_email, receiver_email, message)
-        #server.sendmail(sender_email, 'jned2000@yahoo.com', message)
 
 def album_parse(where_is_JIK):
     keywords = ['KIDS', 'ye', 'Pablo', 'Yeezus', 'Presents', 'Beautiful', '808', 'Graduation', 'Late']
